@@ -1,0 +1,106 @@
+/* ==== POST DETAIL PAGE ==== */
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.detail-container {
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    margin: 40px 0;
+    max-width: 600px;
+    width: 90%;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.detail-container h2 {
+    color: #ffb84d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.detail-container p {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.detail-container h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.detail-container h4 {
+    font-size: 1rem;
+    color: #cccccc;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ffb84d;
+    color: #121212;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #ffa31a;
+    transform: scale(1.05);
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 30px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--button-success);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.7);
+}
+
+.profile-text {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--link-color);
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-out;
+}

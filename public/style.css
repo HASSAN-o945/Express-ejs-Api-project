@@ -1,0 +1,206 @@
+/* Dark Theme Variables */
+:root {
+    --bg-color: #121212;
+    --card-color: #1e1e1e;
+    --text-color: #e4e4e4;
+    --secondary-text: #b5b5b5;
+    --link-color: #4da6ff;
+    --link-hover: #80c1ff;
+    --button-danger: #ff4d4d;
+    --button-danger-hover: #ff1a1a;
+    --button-success: #28a745;
+    --button-success-hover: #218838;
+    --input-bg: #2b2b2b;
+    --input-border: #444;
+}
+
+/* Page Styling */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+h1, h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Post Card */
+.post {
+    background: var(--card-color);
+    width: 90%;
+    max-width: 600px;
+    margin: 15px 0;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.6);
+}
+
+/* Username + Content */
+.username {
+    color: var(--link-color);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.content {
+    color: var(--secondary-text);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    margin-right: 10px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Delete Button */
+form button {
+    background: var(--button-danger);
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+form button:hover {
+    background: var(--button-danger-hover);
+}
+
+/* Create Post Button */
+a[href*="new"] {
+    display: inline-block;
+    background: var(--button-success);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: background 0.2s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+a[href*="new"]:hover {
+    background: var(--button-success-hover);
+}
+
+/* Forms (Edit + New Post) */
+form {
+    background: var(--card-color);
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Input + Textarea Styling */
+input[type="text"],
+textarea {
+    background: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 8px 0 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--button-success);
+}
+
+/* Submit Button */
+button {
+    background: var(--button-success);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: var(--button-success-hover);
+}
+
+/* Profile Section */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 30px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--button-success);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.7);
+}
+
+.profile-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--link-color);
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-out;
+}

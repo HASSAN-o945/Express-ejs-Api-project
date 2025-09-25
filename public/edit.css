@@ -1,0 +1,82 @@
+/* Same Variables for Dark Theme */
+:root {
+    --bg-color: #121212;
+    --card-color: #1e1e1e;
+    --text-color: #e4e4e4;
+    --secondary-text: #b5b5b5;
+    --button-success: #28a745;
+    --button-success-hover: #218838;
+}
+
+/* Page Background and Centering */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Container */
+form {
+    background: var(--card-color);
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Heading */
+h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Post Info (ID + Username) */
+p {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+
+/* Textarea Styling */
+textarea {
+    background: #2b2b2b;
+    color: var(--text-color);
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0 15px;
+    resize: vertical;
+    min-height: 120px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+    border-color: var(--button-success);
+}
+
+/* Submit Button */
+button {
+    background: var(--button-success);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: var(--button-success-hover);
+}

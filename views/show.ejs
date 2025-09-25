@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in Detail</title>
+    <link rel="stylesheet" href="/show.css">
+</head>
+  <body>
+    <!-- Profile Section (Same as index page) -->
+    <div class="profile-card">
+        <img src="/dev.jpeg" alt="Developer" class="profile-img">
+        <p class="profile-text">Developer</p>
+    </div>
+
+    <div class="detail-container">
+        <h2>Here Post In Detail</h2>
+        <p>Post ID: <%= post.id %></p>
+        <h3>@<%= post.username %></h3>
+        <h4><%= post.content %></h4>
+
+        <!-- Back Button -->
+        <a href="/posts" class="back-btn">⬅ Back to Posts</a>
+    </div>
+</body>
+</html>

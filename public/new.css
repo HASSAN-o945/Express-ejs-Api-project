@@ -1,0 +1,91 @@
+/* Same Variables for Dark Theme */
+:root {
+    --bg-color: #121212;
+    --card-color: #1e1e1e;
+    --text-color: #e4e4e4;
+    --secondary-text: #b5b5b5;
+    --button-success: #28a745;
+    --button-success-hover: #218838;
+    --input-bg: #2b2b2b;
+    --input-border: #444;
+}
+
+/* Full Page Centering */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Container */
+.container {
+    background: var(--card-color);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Heading */
+h1 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input + Textarea Styling */
+input[type="text"],
+textarea {
+    background: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 8px 0 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--button-success);
+}
+
+/* Submit Button */
+button {
+    background: var(--button-success);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: var(--button-success-hover);
+}
